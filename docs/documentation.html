@@ -1,0 +1,4860 @@
+<html>
+
+<head>
+    <title>
+        Aurora Pragmatic REST API -  Resource Documentation
+    </title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+<div id="navigation">
+    <h5>List of Resources</h5>
+    <nav>
+        <li><a href="#areas">Areas</a></li>
+        <li><a href="#associates">Associates</a></li>
+        <li><a href="#associate_contacts">Associate Contacts</a></li>
+        <li><a href="#branches">Branches</a></li>
+        <li><a href="#branch_variables">Branch Variables</a></li>
+        <li><a href="#contacts">Contacts</a></li>
+        <li><a href="#customers">Customers</a></li>
+        <li><a href="#customer_variables">Customer Variables</a></li>
+        <li><a href="#departments">Departments</a></li>
+        <li><a href="#discounts">Discounts</a></li>
+        <li><a href="#global_settings">Global Settings</a></li>
+        <li><a href="#happy_hours">Happy Hours</a></li>
+        <li><a href="#happy_hour_timings">Happy Hour Timings</a></li>
+        <li><a href="#inventory_groups">Inventory Groups</a></li>
+        <li><a href="#inventory_items">Inventory Items</a></li>
+        <li><a href="#items">Items</a></li>
+        <li><a href="#item_happy_hours">Item Happy Hours</a></li>
+        <li><a href="#item_modifiers">Item Modifiers</a></li>
+        <li><a href="#item_tags">Item Tags</a></li>
+        <li><a href="#item_time_sittings">Item Time Sittings</a></li>
+        <li><a href="#locations">Locations</a></li>
+        <li><a href="#location_variables">Location Variables</a></li>
+        <li><a href="#menu_categories">Menu Categories</a></li>
+        <li><a href="#menu_category_items">Menu Category Items</a></li>
+        <li><a href="#menu_category_modifiers">Menu Category Modifiers</a></li>
+        <li><a href="#menu_groups">Menu Groups</a></li>
+        <li><a href="#menu_group_categories">Menu Group Categories</a></li>
+        <li><a href="#modifiers">Modifiers</a></li>
+        <li><a href="#modifier_options">Modifier Options</a></li>
+        <li><a href="#modules">Modules</a></li>
+        <li><a href="#operating_times">Operating Times</a></li>
+        <li><a href="#payment_modes">Payment Modes</a></li>
+        <li><a href="#permissions">Permissions</a></li>
+        <li><a href="#printers">Printers</a></li>
+        <li><a href="#roles">Roles</a></li>
+        <li><a href="#role_accesses">Role Accesses</a></li>
+        <li><a href="#shifts">Shifts</a></li>
+        <li><a href="#special_operation_dates">Special Operation Dates</a></li>
+        <li><a href="#special_turn_times">Special Turn Times</a></li>
+        <li><a href="#tags">Tags</a></li>
+        <li><a href="#taxes">Taxes</a></li>
+        <li><a href="#tax_profiles">Tax Profiles</a></li>
+        <li><a href="#time_sittings">Time Sittings</a></li>
+        <li><a href="#transaction_types">Transaction Types</a></li>
+        <li><a href="#users">Users</a></li>
+        <li><a href="#user_credentials">User Credentials</a></li>
+        <li><a href="#user_roles">User Roles</a></li>
+        <br />
+    </nav>
+</div>
+
+<article id="main-content">
+    <h1>Aurora Pragmatic REST API - Resource Documentation</h1>
+
+    <!--areas-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="areas">Areas</h2>
+                <p>
+                    Areas is a collection of areas ordered by name.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/areas</td>
+                <td>if name not existing create area</td>
+                <td>
+                    show all areas available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                        <li>
+                            <em>_locations</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/areas/:id</td>
+                <td>
+                    if exists updates area
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show area
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>_locations</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates area</td>
+                <td>if exists partial updates area</td>
+                <td>if exists deletes area</td>
+            </tr>
+            <tr>
+                <td>/areas/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of areas available under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/areas/:id/status</td>
+                <td>if exists updates area status</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--associates-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="associates">Associates</h2>
+                <p>
+                    Associates is a collection of associates ordered by name.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/associates</td>
+                <td>if name not existing create associate</td>
+                <td>
+                    show all associates available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                        <li>
+                            <em>_contacts</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/associates/:id</td>
+                <td>
+                    if exists updates associate
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show associate
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>_contacts</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates associate</td>
+                <td>if exists partial updates associate</td>
+                <td>if exists deletes associate</td>
+            </tr>
+            <tr>
+                <td>/associates/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of associates available under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/associates/:id/status</td>
+                <td>if exists updates associate status</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--associate contacts-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="associate_contacts">Associate Contacts</h2>
+                <p>
+                    Associate Contacts is a collection of associate contacts ordered by associate name.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/associate_contacts</td>
+                <td>if <em>associate_id</em> and <em>contact_id</em>
+                    combination is unique add contact to associate</td>
+                <td>
+                    show all associate contacts available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/associate_contacts/:id</td>
+                <td>
+                    if exists updates associate contact
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show associate contact
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>if exists updates associate contact</td>
+                <td>if exists partial updates associate contact</td>
+                <td>if exists deletes associate contact</td>
+            </tr>
+            <tr>
+                <td>/associate_contacts/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of associate contacts under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--branches-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="branches">Branches</h2>
+                <p>
+                    Branches is a collection of branches ordered by name.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/branches</td>
+                <td>error</td>
+                <td>
+                    show all branches
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                        <li>
+                            <em>_child</em>
+                        </li>
+                        <li>
+                            <em>_vars</em>
+                        </li>
+                        <li>
+                            <em>_areas</em>
+                        </li>
+                        <li>
+                            <em>_locations</em>
+                        </li>
+                        <li>
+                            <em>_printers</em>
+                        </li>
+                        <li>
+                            <em>_departments</em>
+                        </li>
+                        <li>
+                            <em>_shifts</em>
+                        </li>
+                        <li>
+                            <em>_users</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/branches/:id</td>
+                <td>
+                    if exists updates branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>_child</em>
+                        </li>
+                        <li>
+                            <em>_vars</em>
+                        </li>
+                        <li>
+                            <em>_areas</em>
+                        </li>
+                        <li>
+                            <em>_locations</em>
+                        </li>
+                        <li>
+                            <em>_printers</em>
+                        </li>
+                        <li>
+                            <em>_departments</em>
+                        </li>
+                        <li>
+                            <em>_shifts</em>
+                        </li>
+                        <li>
+                            <em>_users</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates branch</td>
+                <td>if exists partial updates branch</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/branches/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of user roles available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/branches/list</td>
+                <td>error</td>
+                <td>
+                    show all branches on server
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                        <li>
+                            <em>_child</em>
+                        </li>
+                    </ul>
+                    <br />
+                    <p>
+                        (Note: Does not require <em>Access-Token</em>.)
+                    </p>
+
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--branch variables-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="branch_variables">Branch Variables</h2>
+                <p>
+                    Branch Variables is a collection of name-value pairs for a branch ordered by name.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/branch_variables</td>
+                <td>if name not existing create branch variable</td>
+                <td>
+                    show all branch variables available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/branch_variables/:id</td>
+                <td>
+                    if exists updates branch variable
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show branch variable
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates branch variable</td>
+                <td>if exists partial updates branch variable</td>
+                <td>if exists deletes branch variable</td>
+            </tr>
+            <tr>
+                <td>/branch_variables/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of branch variable available under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--contacts-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="contacts">Contacts</h2>
+                <p>
+                    Contacts is a collection of contacts ordered by name.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/contacts</td>
+                <td>if name not existing create contact</td>
+                <td>
+                    show all contacts available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/contacts/:id</td>
+                <td>
+                    if exists updates contact
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show contact
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates contact</td>
+                <td>if exists partial updates contact</td>
+                <td>if exists deletes contact</td>
+            </tr>
+            <tr>
+                <td>/contacts/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of contacts available under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/contacts/:id/status</td>
+                <td>if exists updates contact status</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--customers-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="customers">Customers</h2>
+                <p>
+                    Customers is a collection of customers ordered by name.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/customers</td>
+                <td>if name not existing create customer</td>
+                <td>
+                    show all customers available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                        <li>
+                            <em>_vars</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/customers/:id</td>
+                <td>
+                    if exists updates customer
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show customer
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>_vars</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates customer</td>
+                <td>if exists partial updates customer</td>
+                <td>if exists deletes customer</td>
+            </tr>
+            <tr>
+                <td>/customers/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of customers available under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/customers/:id/status</td>
+                <td>if exists updates customer status</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--customer variables-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="customer_variables">Customer Variables</h2>
+                <p>
+                    Customer Variables is a collection of name-value pairs for a customer ordered by name.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/customer_variables</td>
+                <td>if name not existing create customer variable</td>
+                <td>
+                    show all customer variables available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/customer_variables/:id</td>
+                <td>
+                    if exists updates customer variable
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show customer variable
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates customer variable</td>
+                <td>if exists partial updates customer variable</td>
+                <td>if exists deletes customer variable</td>
+            </tr>
+            <tr>
+                <td>/customer_variables/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of customer variable available under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--discounts-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="discounts">Discounts</h2>
+                <p>
+                    Discounts is a collection of tax discounts ordered by name.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/discounts</td>
+                <td>if name not existing create discount</td>
+                <td>
+                    show all discounts available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/discounts/:id</td>
+                <td>
+                    if exists updates discount
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show tax profile
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates discount</td>
+                <td>if exists partial updates discount</td>
+                <td>if exists deletes discount</td>
+            </tr>
+            <tr>
+                <td>/discounts/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of discount available under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/discounts/:id/status</td>
+                <td>if exists updates discount status</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--departments-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="departments">Departments</h2>
+                <p>
+                    Departments is a collection of departments ordered by name.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/departments</td>
+                <td>if name not existing create department</td>
+                <td>
+                    show all departments available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                        <li>
+                            <em>_users</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/departments/:id</td>
+                <td>
+                    if exists updates department
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show department
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>_users</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates department</td>
+                <td>if exists partial updates department</td>
+                <td>if exists deletes department</td>
+            </tr>
+            <tr>
+                <td>/departments/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of departments available under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/departments/:id/status</td>
+                <td>if exists updates department status</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--global settings-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="global_settings">Global Settings</h2>
+                <p>
+                    Global settings is a list of settings applied to the branch.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/global_settings</td>
+                <td>error</td>
+                <td>
+                    show global settings for requesting branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/global_settings/:id</td>
+                <td>
+                    if exists updates global settings
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show global settings
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates global settings</td>
+                <td>if exists partial updates global settings</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--happy hours-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="happy_hours">Happy Hours</h2>
+                <p>
+                    Happy hours is a collection of happy hours ordered by name.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/happy_hours</td>
+                <td>if name not existing create happy hour</td>
+                <td>
+                    show all happy hours available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                        <li>
+                            <em>_timings</em>
+                        </li>
+                        <li>
+                            <em>_items</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/happy_hours/:id</td>
+                <td>
+                    if exists updates happy hour
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show happy hour
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>_timings</em>
+                        </li>
+                        <li>
+                            <em>_items</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates happy hour</td>
+                <td>if exists partial updates happy hour</td>
+                <td>if exists deletes happy hour</td>
+            </tr>
+            <tr>
+                <td>/happy_hours/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of happy hours available under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/happy_hours/:id/status</td>
+                <td>if exists updates happy hour status</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--happy hour timings-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="happy_hour_timings">Happy Hour Timings</h2>
+                <p>
+                    Happy hour timings is a collection of happy hour timings ordered by name.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/happy_hour_timings</td>
+                <td>create happy hour timing</td>
+                <td>
+                    show all happy hour timings available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/happy_hour_timings/:id</td>
+                <td>
+                    if exists updates happy hour timing
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show happy hour
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates happy hour timing</td>
+                <td>if exists partial updates happy hour timing</td>
+                <td>if exists deletes happy hour timing</td>
+            </tr>
+            <tr>
+                <td>/happy_hour_timings/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of happy hour timings available under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/happy_hour_timings/:id/status</td>
+                <td>if exists updates happy hour timing status</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--inventory groups-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="inventory_groups">Inventory Groups</h2>
+                <p>
+                    Inventory groups is a collection of inventory groups ordered by name.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/inventory_groups</td>
+                <td>if name not existing create inventory group</td>
+                <td>
+                    show all inventory groups available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                        <li>
+                            <em>_items</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/inventory_groups/:id</td>
+                <td>
+                    if exists updates inventory group
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show inventory group
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>_items</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates inventory group</td>
+                <td>if exists partial updates inventory group</td>
+                <td>if exists deletes inventory group</td>
+            </tr>
+            <tr>
+                <td>/inventory_groups/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of inventory groups available under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/inventory_groups/:id/status</td>
+                <td>if exists updates inventory group status</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--inventory items-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="inventory_items">Inventory Items</h2>
+                <p>
+                    Inventory items is a collection of inventory items ordered by role name.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/inventory_items</td>
+                <td>if <em>inventory_group_id</em> and <em>item_id</em> combination
+                    is unique add item to inventory group</td>
+                <td>
+                    show all inventory items available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/inventory_items/:id</td>
+                <td>
+                    if exists updates inventory item
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show inventory item
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates inventory item</td>
+                <td>if exists partial updates inventory item</td>
+                <td>if exists deletes inventory item</td>
+            </tr>
+            <tr>
+                <td>/inventory_items/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of inventory items under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--items-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="items">Items</h2>
+                <p>
+                    Items is a collection of items ordered by name.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/items</td>
+                <td>if name not existing create item</td>
+                <td>
+                    show all items available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                        <li>
+                            <em>_mods</em>
+                        </li>
+                        <li>
+                            <em>_ingredients</em>
+                        </li>
+                        <li>
+                            <em>_tags</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/items/:id</td>
+                <td>
+                    if exists updates item
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show item
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>_mods</em>
+                        </li>
+                        <li>
+                            <em>_ingredients</em>
+                        </li>
+                        <li>
+                            <em>_tags</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates item</td>
+                <td>if exists partial updates item</td>
+                <td>if exists deletes item</td>
+            </tr>
+            <tr>
+                <td>/items/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of item available under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/items/:id/status</td>
+                <td>if exists updates item status</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--item happy hours-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="item_happy_hours">Item Happy Hours</h2>
+                <p>
+                    Item happy hours is a collection of item happy hours pairs ordered by name.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/item_happy_hours</td>
+                <td>if <em>item_id</em> and <em>happy_hour_id</em> combination
+                    is unique add happy hour to item</td>
+                <td>
+                    show all item happy hours available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/item_happy_hours/:id</td>
+                <td>
+                    if exists updates item happy hour
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show item happy hour
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates item happy hour</td>
+                <td>if exists partial updates item happy hour</td>
+                <td>if exists deletes item happy hour</td>
+            </tr>
+            <tr>
+                <td>/item_happy_hours/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of item happy hours under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--item modifiers-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="item_modifiers">Item Modifiers</h2>
+                <p>
+                    Item modifiers is a collection of item modifier pairs ordered by name.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/item_modifiers</td>
+                <td>if <em>item_id</em> and <em>modifier_id</em> combination
+                    is unique add modifier to item</td>
+                <td>
+                    show all item modifiers available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/item_modifiers/:id</td>
+                <td>
+                    if exists updates item modifier
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show item modifier
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates item modifier</td>
+                <td>if exists partial updates item modifier</td>
+                <td>if exists deletes item modifier</td>
+            </tr>
+            <tr>
+                <td>/item_modifiers/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of item modifiers under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/item_modifiers/:id/priority_level</td>
+                <td>if exists updates modifier priority_level on item</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--item tags-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="item_tags">Item Tags</h2>
+                <p>
+                    Item tags is a collection of item tag pairs ordered by name.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/item_tags</td>
+                <td>if <em>item_id</em> and <em>tag_id</em> combination
+                    is unique add tag to item</td>
+                <td>
+                    show all item tags available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/item_tags/:id</td>
+                <td>
+                    if exists updates item tag
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show item tag
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates item tag</td>
+                <td>if exists partial updates item tag</td>
+                <td>if exists deletes item tag</td>
+            </tr>
+            <tr>
+                <td>/item_tags/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of item tags under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--item time sittings-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="item_time_sittings">Item Tags</h2>
+                <p>
+                    Item time sittings is a collection of item time sittings ordered by name.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/item_time_sittings</td>
+                <td>if <em>item_id</em> and <em>time_sitting_id</em> combination
+                    is unique add item sitting to item</td>
+                <td>
+                    show all item time sittings available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/item_time_sittings/:id</td>
+                <td>
+                    if exists updates item time sitting
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show item time sitting
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates item time sitting</td>
+                <td>if exists partial updates item time sitting</td>
+                <td>if exists deletes item time sitting</td>
+            </tr>
+            <tr>
+                <td>/item_time_sittings/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of item time sittings under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--locations-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="locations">Locations</h2>
+                <p>
+                    Locations is a collection of locations ordered by name.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/locations</td>
+                <td>if name not existing create location</td>
+                <td>
+                    show all locations available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                        <li>
+                            <em>_vars</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/locations/:id</td>
+                <td>
+                    if exists updates location
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show location
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>_vars</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates location</td>
+                <td>if exists partial updates location</td>
+                <td>if exists deletes location</td>
+            </tr>
+            <tr>
+                <td>/locations/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of locations available under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/locations/:id/status</td>
+                <td>if exists updates location status</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--location variables-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="location_variables">Location Variables</h2>
+                <p>
+                    Location Variables is a collection of name-value pairs for a location ordered by name.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/location_variables</td>
+                <td>if name not existing create location variable</td>
+                <td>
+                    show all location variables available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/location_variables/:id</td>
+                <td>
+                    if exists updates location variable
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show location variable
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates location variable</td>
+                <td>if exists partial updates location variable</td>
+                <td>if exists deletes location variable</td>
+            </tr>
+            <tr>
+                <td>/location_variables/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of location variable available under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--menu categories-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="menu_categories">Menu Categories</h2>
+                <p>
+                    Menu categories is a collection of menu categories ordered by name.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/menu_categories</td>
+                <td>if name not existing create menu category</td>
+                <td>
+                    show all menu categories available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                        <li>
+                            <em>_items</em>
+                        </li>
+                        <li>
+                            <em>_mods</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/menu_categories/:id</td>
+                <td>
+                    if exists updates menu category
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show menu category
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>_items</em>
+                        </li>
+                        <li>
+                            <em>_mods</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates menu category</td>
+                <td>if exists partial updates menu category</td>
+                <td>if exists deletes menu category</td>
+            </tr>
+            <tr>
+                <td>/menu_categories/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of menu categories available under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/menu_categories/:id/status</td>
+                <td>if exists updates menu category status</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--menu category items-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="menu_category_items">Menu Category Items</h2>
+                <p>
+                    Menu category items is a collection of menu category item pairs ordered by name.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/menu_category_items</td>
+                <td>if <em>menu_group_id</em> and <em>item_id</em> combination
+                    is unique add item to menu category</td>
+                <td>
+                    show all menu category items available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/menu_category_items/:id</td>
+                <td>
+                    if exists updates menu category item
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show menu category item
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates menu category item</td>
+                <td>if exists partial updates menu category item</td>
+                <td>if exists deletes menu category item</td>
+            </tr>
+            <tr>
+                <td>/menu_category_items/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of menu category items under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/menu_category_items/:id/priority_level</td>
+                <td>if exists updates item priority_level on menu category</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--menu category modifiers-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="menu_category_modifiers">Menu Category Modifiers</h2>
+                <p>
+                    Menu category modifiers is a collection of menu category modifier pairs ordered by name.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/menu_category_modifiers</td>
+                <td>if <em>menu_group_id</em> and <em>modifier_id</em> combination
+                    is unique add modifier to menu category</td>
+                <td>
+                    show all menu category modifiers available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/menu_category_modifiers/:id</td>
+                <td>
+                    if exists updates menu category modifier
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show menu category modifier
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates menu category modifier</td>
+                <td>if exists partial updates menu category modifier</td>
+                <td>if exists deletes menu category modifier</td>
+            </tr>
+            <tr>
+                <td>/menu_category_modifiers/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of menu category modifiers under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/menu_category_modifiers/:id/priority_level</td>
+                <td>if exists updates modifier priority_level on menu category</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--menu groups-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="menu_groups">Menu Groups</h2>
+                <p>
+                    Menu groups is a collection of menu group ordered by priority.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/menu_groups</td>
+                <td>if name not existing create menu group</td>
+                <td>
+                    show all menu groups available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                        <li>
+                            <em>_categories</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/menu_groups/:id</td>
+                <td>
+                    if exists updates menu group
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show menu group
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>_categories</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates menu group</td>
+                <td>if exists partial updates menu group</td>
+                <td>if exists deletes menu group</td>
+            </tr>
+            <tr>
+                <td>/menu_groups/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of menu groups available under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/menu_groups/:id/status</td>
+                <td>if exists updates menu group status</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/menu_groups/:id/priority_level</td>
+                <td>if exists updates menu group priority_level</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--menu group categories-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="menu_group_categories">Menu Group Categories</h2>
+                <p>
+                    Menu group categories is a collection of menu group category pairs ordered by name.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/menu_group_categories</td>
+                <td>if <em>menu_group_id</em> and <em>menu_category_id</em> combination
+                    is unique add menu category to menu group</td>
+                <td>
+                    show all menu group categories available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/menu_group_categories/:id</td>
+                <td>
+                    if exists updates menu group category
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show menu group category
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates menu group category</td>
+                <td>if exists partial updates menu group category</td>
+                <td>if exists deletes menu group category</td>
+            </tr>
+            <tr>
+                <td>/menu_group_categories/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of menu group categories under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/menu_group_categories/:id/priority_level</td>
+                <td>if exists updates menu category priority_level on menu group</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--modifiers-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="modifiers">Modifiers</h2>
+                <p>
+                    Modifiers is a collection of modifiers ordered by name.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/modifiers</td>
+                <td>if name not existing create modifier</td>
+                <td>
+                    show all modifiers available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                        <li>
+                            <em>_options</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/modifiers/:id</td>
+                <td>
+                    if exists updates modifier
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show modifier
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>_options</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates modifier</td>
+                <td>if exists partial updates modifier</td>
+                <td>if exists deletes modifier</td>
+            </tr>
+            <tr>
+                <td>/modifiers/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of modifiers available under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/modifier/:id/status</td>
+                <td>if exists updates modifier status</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--modifier options-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="modifier_options">Modifier Options</h2>
+                <p>
+                    Modifier options is a collection of modifier options ordered by name.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/modifier_options</td>
+                <td>if name not existing create modifier option</td>
+                <td>
+                    show all modifier options available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/modifier_options/:id</td>
+                <td>
+                    if exists updates modifier option
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show modifier option
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates modifier option</td>
+                <td>if exists partial updates modifier option</td>
+                <td>if exists deletes modifier option</td>
+            </tr>
+            <tr>
+                <td>/modifier_options/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of options available under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/modifier_options/:id/status</td>
+                <td>if exists updates modifier option status</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/modifier_options/:id/priority_level</td>
+                <td>if exists updates option priority_level on modifier</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--modules-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="modules">Modules</h2>
+                <p>
+                    Modules is a collection of system modules in fixed order.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/modules</td>
+                <td>error</td>
+                <td>
+                    show all modules
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/modules/:id</td>
+                <td>error</td>
+                <td>
+                    show module
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/modules/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of modules available under a branch
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--operating times-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="operating_times">Operating Times</h2>
+                <p>
+                    Operating Times is a collection of branch operating time ordered by day of week.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/operating_times</td>
+                <td>if name not existing create operating time</td>
+                <td>
+                    show all operating times available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/operating_times/:id</td>
+                <td>
+                    if exists updates operating time
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show operating time
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates operating time</td>
+                <td>if exists partial updates operating time</td>
+                <td>if exists deletes operating time</td>
+            </tr>
+            <tr>
+                <td>/operating_times/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of operating times available under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--payment modes-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="payment_modes">Payment Modes</h2>
+                <p>
+                    Payment Modes is a collection of payment modes ordered by name.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/payment_modes</td>
+                <td>if name not existing create payment mode</td>
+                <td>
+                    show all payment modes available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/payment_modes/:id</td>
+                <td>
+                    if exists updates payment mode
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show payment mode
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates payment mode</td>
+                <td>if exists partial updates payment mode</td>
+                <td>if exists deletes payment mode</td>
+            </tr>
+            <tr>
+                <td>/payment_modes/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of payment modes available under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/payment_modes/:id/status</td>
+                <td>if exists updates payment mode status</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--permissions-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="permissions">Permissions</h2>
+                <p>
+                    Permissions is a collection of user access permissions.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/permissions</td>
+                <td>error</td>
+                <td>
+                    show all access permissions available under a requesting <em>access_token</em>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--printers-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="printers">Printers</h2>
+                <p>
+                    Printers is a collection of printers ordered by name.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/printers</td>
+                <td>if name not existing create printer</td>
+                <td>
+                    show all printer available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/printers/:id</td>
+                <td>
+                    if exists updates printer
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show printer
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates printer</td>
+                <td>if exists partial updates printer</td>
+                <td>if exists deletes printer</td>
+            </tr>
+            <tr>
+                <td>/printers/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of printers available under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/printers/:id/status</td>
+                <td>if exists updates printer status</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--roles-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="roles">Roles</h2>
+                <p>
+                    Roles is a collection of roles ordered by name.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/roles</td>
+                <td>if name not existing create user role</td>
+                <td>
+                    show all roles available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                        <li>
+                            <em>_access</em>
+                        </li>
+                        <li>
+                            <em>_users</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/roles/:id</td>
+                <td>
+                    if exists updates role
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show role
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>_access</em>
+                        </li>
+                        <li>
+                            <em>_users</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates role</td>
+                <td>if exists partial updates role</td>
+                <td>if exists deletes role</td>
+            </tr>
+            <tr>
+                <td>/roles/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of roles available under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/roles/:id/status</td>
+                <td>if exists updates user status</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--role accesses-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="role_accesses">Role Accesses</h2>
+                <p>
+                    Role accesses is a collection of role access ordered by role name.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/role_accesses</td>
+                <td>if <em>role_id</em> and <em>access_id</em> and
+                    <em>target_branch_id</em> combination
+                    is unique add access to role</td>
+                <td>
+                    show all role access available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/role_accesses/:id</td>
+                <td>
+                    if exists updates role accesses
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show role access
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates role access</td>
+                <td>if exists partial updates role access</td>
+                <td>if exists deletes role access</td>
+            </tr>
+            <tr>
+                <td>/role_accesses/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of role access under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--shifts-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="shifts">Shifts</h2>
+                <p>
+                    Shifts is a collection of shifts ordered by name.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/shifts</td>
+                <td>if name not existing create shift</td>
+                <td>
+                    show all shifts available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                        <li>
+                            <em>_users</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/shifts/:id</td>
+                <td>
+                    if exists updates shift
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show shift
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>_users</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates shift</td>
+                <td>if exists partial updates shift</td>
+                <td>if exists deletes shift</td>
+            </tr>
+            <tr>
+                <td>/shifts/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of shifts available under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/shifts/:id/status</td>
+                <td>if exists updates shift status</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--special operation dates-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="special_operation_dates">Special Operation Dates</h2>
+                <p>
+                    Special Operation Dates is a collection of branch special operation dates ordered by day of week.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/special_operation_dates</td>
+                <td>if name not existing create special operation date</td>
+                <td>
+                    show all special operation dates available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/special_operation_dates/:id</td>
+                <td>
+                    if exists updates special operation date
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show special operation date
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates special operation date</td>
+                <td>if exists partial updates special operation date</td>
+                <td>if exists deletes special operation date</td>
+            </tr>
+            <tr>
+                <td>/special_operation_dates/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of special operation dates available under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--special turn times-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="special_turn_times">Special Turn Times</h2>
+                <p>
+                    Special Turn Times is a collection of branch special turn time ordered by day of week.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/special_turn_times</td>
+                <td>if name not existing create special turn time</td>
+                <td>
+                    show all special turn times available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/special_turn_times/:id</td>
+                <td>
+                    if exists updates special turn time
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show special turn time
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates special turn time</td>
+                <td>if exists partial updates special turn time</td>
+                <td>if exists deletes special turn time</td>
+            </tr>
+            <tr>
+                <td>/special_turn_times/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of special turn times available under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--tags-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="tags">Tags</h2>
+                <p>
+                    Tags is a collection of tags ordered by name.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/tags</td>
+                <td>if name not existing create tag</td>
+                <td>
+                    show all tags available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                        <li>
+                            <em>_items</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/tags/:id</td>
+                <td>
+                    if exists updates tag
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show tag
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>_items</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates tag</td>
+                <td>if exists partial updates tag</td>
+                <td>if exists deletes tag</td>
+            </tr>
+            <tr>
+                <td>/tags/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of tags available under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--taxes-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="taxes">Taxes</h2>
+                <p>
+                    Taxes is a collection of taxes ordered by priority.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/taxes</td>
+                <td>if name not existing create tax</td>
+                <td>
+                    show all taxes available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/taxes/:id</td>
+                <td>
+                    if exists updates tax
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show tax
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates tax</td>
+                <td>if exists partial updates tax</td>
+                <td>if exists deletes tax</td>
+            </tr>
+            <tr>
+                <td>/taxes/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of taxes available under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/taxes/:id/status</td>
+                <td>if exists updates tax status</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/taxes/:id/priority_level</td>
+                <td>if exists updates tax priority_level</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--tax profiles-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="tax_profiles">Tax Profiles</h2>
+                <p>
+                    Tax Profiles is a collection of tax profiles ordered by name.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/tax_profiles</td>
+                <td>if name not existing create tax profile</td>
+                <td>
+                    show all tax profiles available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                        <li>
+                            <em>_taxes</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/tax_profiles/:id</td>
+                <td>
+                    if exists updates tax profile
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show tax profile
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>_taxes</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates tax profile</td>
+                <td>if exists partial updates tax profile</td>
+                <td>if exists deletes tax profile</td>
+            </tr>
+            <tr>
+                <td>/tax_profiles/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of tax profiles available under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/tax_profiles/:id/status</td>
+                <td>if exists updates tax profile status</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--time sittings-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="time_sittings">Time Sittings</h2>
+                <p>
+                    Time sittings is a collection of time sittings ordered by name.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/time_sittings</td>
+                <td>if name not existing create time sitting</td>
+                <td>
+                    show all time sittings available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                        <li>
+                            <em>_items</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/time_sittings/:id</td>
+                <td>
+                    if exists updates time sitting
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show department
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>_items</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates time sitting</td>
+                <td>if exists partial updates time sitting</td>
+                <td>if exists deletes time sitting</td>
+            </tr>
+            <tr>
+                <td>/time_sittings/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of time sittings available under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/time_sittings/:id/status</td>
+                <td>if exists updates time sitting status</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--transaction types-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="transaction_types">Transaction Types</h2>
+                <p>
+                    Transaction Types is a collection of transaction types ordered by name.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/transaction_types</td>
+                <td>if name not existing create transaction type</td>
+                <td>
+                    show all transaction types available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/transaction_types/:id</td>
+                <td>
+                    if exists updates transaction type
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show transaction type
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates transaction type</td>
+                <td>if exists partial updates transaction type</td>
+                <td>if exists deletes transaction type</td>
+            </tr>
+            <tr>
+                <td>/transaction_types/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of transaction types available under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/transaction_types/:id/status</td>
+                <td>if exists updates transaction type status</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--users-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="users">Users</h2>
+                <p>
+                    Users is a collection of users ordered by first name.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/users</td>
+                <td>if first and last name combination is not existing create user</td>
+                <td>
+                    show all users available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/users/:id</td>
+                <td>
+                    if exists updates user
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show user
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates user</td>
+                <td>if exists partial updates user</td>
+                <td>if exists deletes user</td>
+            </tr>
+            <tr>
+                <td>/users/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of users available under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/users/:id/status</td>
+                <td>if exists updates user status</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--user credentials-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="user_credentials">User Credentials</h2>
+                <p>
+                    User credentials is a collection of user
+                    credentials ordered by username.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/user_credentials</td>
+                <td>if username name is not existing create user credential</td>
+                <td>
+                    show all user credentials available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                        <li>
+                            <em>_roles</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/user_credentials/:id</td>
+                <td>
+                    if exists updates user credential
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show user credential
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>_roles</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates user credential</td>
+                <td>if exists partial updates user credential</td>
+                <td>if exists deletes user credential</td>
+            </tr>
+            <tr>
+                <td>/user_credentials/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of user credentials available under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/user_credentials/:id/status</td>
+                <td>if exists updates user credential status</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/user_credentials/list</td>
+                <td>error</td>
+                <td>
+                    show all user credentials on server
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                        <li>
+                            <em>_roles</em>
+                        </li>
+                    </ul>
+                    <br />
+                    <p>
+                        (Note: Does not require <em>Access-Token</em>.)
+                    </p>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/user_credentials/login</td>
+                <td>
+                    if valid user credential returns access information
+                    <br />
+                    <p>
+                        (Note: Does not require <em>Access-Token</em>.)
+                    </p>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/user_credentials/permissions</td>
+                <td>error</td>
+                <td>returns detailed access permissions of current user</td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--user roles-->
+    <section>
+        <table>
+            <caption>
+                <h2 id="user_roles">User Roles</h2>
+                <p>
+                    User roles is a collection of user roles ordered by role name.
+                </p>
+            </caption>
+            <thead>
+            <tr>
+                <th><strong>Resource</strong></th>
+                <th><strong>POST</strong><p>create/partial update</p></th>
+                <th><strong>GET</strong><p>read</p></th>
+                <th><strong>PUT</strong><p>update</p></th>
+                <th><strong>PATCH</strong><p>partial update</p></th>
+                <th><strong>DELETE</strong><p>delete</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/user_roles</td>
+                <td>if <em>role_id</em> and <em>user_credential_id</em> combination
+                    is unique add role to user credential</td>
+                <td>
+                    show all user roles available under a branch
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                        <li>
+                            <em>sort_by</em>
+                        </li>
+                        <li>
+                            <em>per_page</em>
+                        </li>
+                        <li>
+                            <em>page</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            <tr>
+                <td>/user_roles/:id</td>
+                <td>
+                    if exists updates user role
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <em>_method</em>
+                </td>
+                <td>
+                    show user role
+                    <br/><strong>Optional Parameters</strong>
+                    <ul>
+                        <li>
+                            <em>fields</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>if exists updates user role</td>
+                <td>if exists partial updates user role</td>
+                <td>if exists deletes user role</td>
+            </tr>
+            <tr>
+                <td>/user_roles/count</td>
+                <td>error</td>
+                <td>
+                    returns total count of user roles under a branch
+                    <br /><strong>Optional Parameters</strong> <br />
+                    <ul>
+                        <li>
+                            <em>keywords</em>
+                        </li>
+                        <li>
+                            <em>[field]</em>
+                        </li>
+                    </ul>
+                </td>
+                <td>error</td>
+                <td>error</td>
+                <td>error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+</article>
+</body>
+
+</html>

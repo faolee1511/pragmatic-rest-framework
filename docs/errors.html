@@ -1,0 +1,206 @@
+<html>
+	<head>
+		<title>
+			Aurora REST API Error Codes
+		</title>
+        <link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+		<article>
+			<h1>Aurora REST API - Error Codes</h1>
+			<section>
+				<table>
+					<caption>
+						<h2>400 Errors</h2>
+						<p>
+							Bad Request
+						</p>
+					</caption>
+                    <thead>
+                    <tr>
+                        <th>Code</th>
+                        <th>Error</th>
+                        <th>Cause</th>
+                        <th>Fix</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr id="40001">
+                        <td>40001</td>
+                        <td>Validation Error</td>
+                        <td>You have sent data that did not meet the validation requirements for a POST/PUT/PATCH request.</td>
+                        <td>Conform to the required data format and required fields.</td>
+                    </tr>
+                    </tbody>
+				</table>
+			</section>
+            <section>
+                <table>
+                    <caption>
+                        <h2>401 Errors</h2>
+                        <p>
+                            Unauthorized
+                        </p>
+                    </caption>
+                    <thead>
+                    <tr>
+                        <th>Code</th>
+                        <th>Error</th>
+                        <th>Cause</th>
+                        <th>Fix</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr id="40101">
+                        <td>40101</td>
+                        <td>Unauthorized Request</td>
+                        <td>Unidentified branch request.</td>
+                        <td>Make sure that the <em>branch_id</em> you're sending in the html header is correct.</td>
+                    </tr>
+                    <tr id="40102">
+                        <td>40102</td>
+                        <td>Unauthorized Viewing Request</td>
+                        <td>Unauthorized view request of a resource.</td>
+                        <td>Make sure user have proper authorization for requested action.</td>
+                    </tr>
+                    <tr id="40103">
+                        <td>40103</td>
+                        <td>Unauthorized Modification Request</td>
+                        <td>Unauthorized modification request of a resource.</td>
+                        <td>Make sure user have proper authorization for requested action.</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section>
+                <table>
+                    <caption>
+                        <h2>403 Errors</h2>
+                        <p>
+                            Forbidden
+                        </p>
+                    </caption>
+                    <thead>
+                    <tr>
+                        <th>Code</th>
+                        <th>Error</th>
+                        <th>Cause</th>
+                        <th>Fix</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>40301</td>
+                        <td>Blah</td>
+                        <td>Blah</td>
+                        <td>Blah</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section>
+                <table>
+                    <caption>
+                        <h2>404 Errors</h2>
+                        <p>
+                            Not Found
+                        </p>
+                    </caption>
+                    <thead>
+                    <tr>
+                        <th>Code</th>
+                        <th>Error</th>
+                        <th>Cause</th>
+                        <th>Fix</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr id="40401">
+                        <td>40401</td>
+                        <td>No Resource Found</td>
+                        <td>There are no resource to return based on your URI request.</td>
+                        <td>Make sure you are using correct URI and valid parameters.</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section>
+                <table>
+                    <caption>
+                        <h2>406 Errors</h2>
+                        <p>
+                            Not Accepted
+                        </p>
+                    </caption>
+                    <thead>
+                    <tr>
+                        <th>Code</th>
+                        <th>Error</th>
+                        <th>Cause</th>
+                        <th>Fix</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr id="40601">
+                        <td>40601</td>
+                        <td>Request Not Acceptable</td>
+                        <td>The request accept header does not allow <em>application/json</em> format.</td>
+                        <td>Add <em>application/json</em> in the request accept header.</td>
+                    </tr>
+                    <tr id="40602">
+                        <td>40602</td>
+                        <td>Request Origin Unknown</td>
+                        <td>The request header does not include a <em>Branch</em>.</td>
+                        <td>Add a valid <em>Branch</em> in the request header.</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section>
+                <table>
+                    <caption>
+                        <h2>500 Errors</h2>
+                        <p>
+                            Internal Server Error
+                        </p>
+                    </caption>
+                    <thead>
+                    <tr>
+                        <th>Code</th>
+                        <th>Error</th>
+                        <th>Cause</th>
+                        <th>Fix</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr id="50001">
+                        <td>50001</td>
+                        <td>Database Connection Error</td>
+                        <td>
+                            <ul>
+                                <li>Improper connection settings</li>
+                                <li>MySQL service not available</li>
+                                <li>Database driver problem</li>
+                            </ul>
+                        </td>
+                        <td>Make sure connection settings, MySQL service and database driver are properly configured</td>
+                    </tr>
+                    <tr id="50002">
+                        <td>50002</td>
+                        <td>Invalid SQL Query</td>
+                        <td>A data sent to the server has caused an unexpected error in an SQL Query.</td>
+                        <td>Contact API support and provide the error details.</td>
+                    </tr>
+                    <tr id="50003">
+                        <td>50003</td>
+                        <td>Internal Code Error</td>
+                        <td>An invalid instruction code is being run.</td>
+                        <td>Contact API support and provide the error details.</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+		</article>
+	</body>
+
+</html>

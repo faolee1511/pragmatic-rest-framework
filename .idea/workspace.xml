@@ -1,0 +1,861 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1da4a08d-99b2-4610-a952-e3dedde403aa" name="Default" comment="" />
+    <ignored path="aurora.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="aurora" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="Role.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aurora/model/Role.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="81" column="32" selection-start="1935" selection-end="1935" vertical-scroll-proportion="0.0" vertical-offset="1377" max-vertical-offset="3604">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Shift.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aurora/model/Shift.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="90" column="32" selection-start="2232" selection-end="2232" vertical-scroll-proportion="0.0" vertical-offset="1530" max-vertical-offset="3587">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tax.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aurora/model/Tax.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="112" column="32" selection-start="2947" selection-end="2947" vertical-scroll-proportion="0.0" vertical-offset="1904" max-vertical-offset="4862">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TaxProfile.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aurora/model/TaxProfile.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="81" column="32" selection-start="2000" selection-end="2000" vertical-scroll-proportion="0.0" vertical-offset="1377" max-vertical-offset="3434">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TimeSitting.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aurora/model/TimeSitting.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="120" column="32" selection-start="3045" selection-end="3045" vertical-scroll-proportion="0.0" vertical-offset="2040" max-vertical-offset="3995">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransactionType.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aurora/model/TransactionType.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="91" column="32" selection-start="2385" selection-end="2385" vertical-scroll-proportion="0.0" vertical-offset="1547" max-vertical-offset="3536">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aurora/model/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="140" column="32" selection-start="3719" selection-end="3719" vertical-scroll-proportion="0.0" vertical-offset="2380" max-vertical-offset="5338">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserCredential.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aurora/model/UserCredential.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="150" column="50" selection-start="4209" selection-end="4209" vertical-scroll-proportion="0.0" vertical-offset="2550" max-vertical-offset="9792">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Area.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aurora/model/Area.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="82" column="32" selection-start="1991" selection-end="1995" vertical-scroll-proportion="0.0" vertical-offset="1394" max-vertical-offset="3434">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CurrentRequest.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/aurora/model/CurrentRequest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="196" column="25" selection-start="5422" selection-end="5422" vertical-scroll-proportion="-0.093818985" vertical-offset="3332" max-vertical-offset="4556">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/aurora/model/RoleAccess.php" />
+        <option value="$PROJECT_DIR$/aurora/model/DbContextAbstract.php" />
+        <option value="$PROJECT_DIR$/aurora/controller/ItemModifierController.php" />
+        <option value="$PROJECT_DIR$/aurora/controller/MenuCategoryItemController.php" />
+        <option value="$PROJECT_DIR$/aurora/controller/MenuCategoryModifierController.php" />
+        <option value="$PROJECT_DIR$/aurora/controller/MenuGroupCategoryController.php" />
+        <option value="$PROJECT_DIR$/aurora/controller/ModifierOptionController.php" />
+        <option value="$PROJECT_DIR$/aurora/controller/TaxController.php" />
+        <option value="$PROJECT_DIR$/aurora/controller/TagController.php" />
+        <option value="$PROJECT_DIR$/aurora/controller/ItemTagController.php" />
+        <option value="$PROJECT_DIR$/aurora/model/ItemTag.php" />
+        <option value="$PROJECT_DIR$/aurora/model/Tag.php" />
+        <option value="$PROJECT_DIR$/aurora/controller/TimeSittingControl.php" />
+        <option value="$PROJECT_DIR$/aurora/controller/ItemTimeSittingController.php" />
+        <option value="$PROJECT_DIR$/aurora/model/ItemTimeSitting.php" />
+        <option value="$PROJECT_DIR$/aurora/controller/HappyHourController.php" />
+        <option value="$PROJECT_DIR$/aurora/controller/HappyHourTimingController.php" />
+        <option value="$PROJECT_DIR$/aurora/model/ItemHappyHour.php" />
+        <option value="$PROJECT_DIR$/aurora/controller/ItemHappyHourController.php" />
+        <option value="$PROJECT_DIR$/aurora/router/route_settings.php" />
+        <option value="$PROJECT_DIR$/docs/documentation.html" />
+        <option value="$PROJECT_DIR$/aurora/router/error_routes.php" />
+        <option value="$PROJECT_DIR$/aurora/router/route_composer.php" />
+        <option value="$PROJECT_DIR$/aurora/controller/UploadController.php" />
+        <option value="$PROJECT_DIR$/aurora/model/Area.php" />
+        <option value="$PROJECT_DIR$/aurora/model/Associate.php" />
+        <option value="$PROJECT_DIR$/aurora/model/Branch.php" />
+        <option value="$PROJECT_DIR$/aurora/model/Contact.php" />
+        <option value="$PROJECT_DIR$/aurora/model/Customer.php" />
+        <option value="$PROJECT_DIR$/aurora/model/Department.php" />
+        <option value="$PROJECT_DIR$/aurora/model/Discount.php" />
+        <option value="$PROJECT_DIR$/aurora/model/HappyHour.php" />
+        <option value="$PROJECT_DIR$/aurora/model/HappyHourTiming.php" />
+        <option value="$PROJECT_DIR$/aurora/model/InventoryGroup.php" />
+        <option value="$PROJECT_DIR$/aurora/model/Item.php" />
+        <option value="$PROJECT_DIR$/aurora/model/Location.php" />
+        <option value="$PROJECT_DIR$/aurora/model/MenuCategory.php" />
+        <option value="$PROJECT_DIR$/aurora/model/MenuGroup.php" />
+        <option value="$PROJECT_DIR$/aurora/model/Modifier.php" />
+        <option value="$PROJECT_DIR$/aurora/model/ModifierOption.php" />
+        <option value="$PROJECT_DIR$/aurora/model/PaymentMode.php" />
+        <option value="$PROJECT_DIR$/aurora/model/Printer.php" />
+        <option value="$PROJECT_DIR$/aurora/model/Role.php" />
+        <option value="$PROJECT_DIR$/aurora/model/Shift.php" />
+        <option value="$PROJECT_DIR$/aurora/model/Tax.php" />
+        <option value="$PROJECT_DIR$/aurora/model/TaxProfile.php" />
+        <option value="$PROJECT_DIR$/aurora/model/TimeSitting.php" />
+        <option value="$PROJECT_DIR$/aurora/model/TransactionType.php" />
+        <option value="$PROJECT_DIR$/aurora/model/User.php" />
+        <option value="$PROJECT_DIR$/aurora/model/UserCredential.php" />
+        <option value="$PROJECT_DIR$/aurora/model/CurrentRequest.php" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 5.5.10" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1066" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope">
+        <subPane subId="Problems" />
+        <subPane subId="Tests" />
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="aurora">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="aurora">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="docs">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="aurora">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="aurora">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="aurora">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="aurora">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="router">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aurora" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aurora" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aurora" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aurora" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aurora" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aurora" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aurora" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aurora" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aurora" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="options.lastSelected" value="preferences.sourceCode.General" />
+    <property name="options.splitter.main.proportions" value="0.28583333" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../feedbackers" />
+    <property name="recentsLimit" value="5" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="FullScreen" value="false" />
+    <property name="SearchEverywhereHistory" value="''&#10;deliver_data_response(200, 'Resources Found', $data, array('totalCount' =&gt; $total));&#10;{&#10;!=" />
+  </component>
+  <component name="RecentsManager">
+    <key name="OPEN_URL_DIALOG">
+      <recent name="http://192.168.1.2" />
+      <recent name="http://192.168.1.3" />
+      <recent name="http://192.168.1.149" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\DevMode\Desktop\aurora\aurora" />
+      <recent name="C:\Users\DevMode\Desktop\aurora" />
+    </key>
+  </component>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://127.0.0.1" />
+          <option name="urlPath" value="/users" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://127.0.0.1" />
+          <option name="urlPath" value="/wines" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="PHP Script.Department.php">
+    <configuration default="false" name="BaseModelAbstract.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/aurora/model/BaseModelAbstract.php">
+      <RunnerSettings RunnerId="PhpRunner" />
+      <ConfigurationWrapper RunnerId="PhpRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Branch.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/aurora/model/Branch.php">
+      <RunnerSettings RunnerId="PhpRunner" />
+      <ConfigurationWrapper RunnerId="PhpRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="test.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/aurora/test.php">
+      <RunnerSettings RunnerId="PhpRunner" />
+      <ConfigurationWrapper RunnerId="PhpRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="responder.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/aurora/responder.php">
+      <RunnerSettings RunnerId="PhpRunner" />
+      <RunnerSettings RunnerId="PhpScriptDebugRunner" />
+      <ConfigurationWrapper RunnerId="PhpRunner" />
+      <ConfigurationWrapper RunnerId="PhpScriptDebugRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Department.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/aurora/model/Department.php">
+      <RunnerSettings RunnerId="PhpScriptDebugRunner" />
+      <ConfigurationWrapper RunnerId="PhpScriptDebugRunner" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpHttpRequestRunConfigurationType" factoryName="PHP HTTP Request">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="XSLT" factoryName="XSLT">
+      <option name="myOutputFile" />
+      <option name="myOpenOutputFile" value="false" />
+      <option name="myOpenInBrowser" value="false" />
+      <option name="mySmartErrorHandling" value="true" />
+      <option name="myRunnerPort" value="34873" />
+      <option name="myVmArguments" />
+      <option name="myWorkingDirectory" />
+      <option name="myModule" />
+      <option name="myJdk" />
+      <parameters />
+      <OutputType value="CONSOLE" save-to-file="false" />
+      <FileType name="XML" />
+      <JdkChoice value="FROM_MODULE" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AppEnginePhpConfigurationType" factoryName="App Engine for PHP">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
+      <method />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="PHP Script.BaseModelAbstract.php" />
+      <item index="1" class="java.lang.String" itemvalue="PHP Script.Branch.php" />
+      <item index="2" class="java.lang.String" itemvalue="PHP Script.test.php" />
+      <item index="3" class="java.lang.String" itemvalue="PHP Script.responder.php" />
+      <item index="4" class="java.lang.String" itemvalue="PHP Script.Department.php" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="PHP Script.Department.php" />
+        <item index="1" class="java.lang.String" itemvalue="PHP Script.Branch.php" />
+        <item index="2" class="java.lang.String" itemvalue="PHP Script.responder.php" />
+        <item index="3" class="java.lang.String" itemvalue="PHP Script.BaseModelAbstract.php" />
+        <item index="4" class="java.lang.String" itemvalue="PHP Script.test.php" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1da4a08d-99b2-4610-a952-e3dedde403aa" name="Default" comment="" />
+      <created>1394860126932</created>
+      <updated>1394860126932</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23802084" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39979124" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21816283" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41958886" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32985386" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="47" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/aurora/model/ItemTag.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="242" column="7" selection-start="164" selection-end="6694" vertical-scroll-proportion="5.168176" vertical-offset="0" max-vertical-offset="4114" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/model/ItemHappyHour.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="39" selection-start="1979" selection-end="1979" vertical-scroll-proportion="0.43984476" vertical-offset="969" max-vertical-offset="4216" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/controller/ItemHappyHourController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="2" selection-start="272" selection-end="272" vertical-scroll-proportion="0.3518758" vertical-offset="0" max-vertical-offset="773" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/router/route_settings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="177" column="18" selection-start="4370" selection-end="4370" vertical-scroll-proportion="-11.115385" vertical-offset="2601" max-vertical-offset="8602" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/model/ItemTimeSitting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="241" column="7" selection-start="6934" selection-end="6934" vertical-scroll-proportion="0.9353169" vertical-offset="161" max-vertical-offset="1003" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/documentation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1754" column="0" selection-start="62249" selection-end="62261" vertical-scroll-proportion="4.0245795" vertical-offset="21369" max-vertical-offset="74103" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/model/ApiCredential.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/router/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="25" selection-start="541" selection-end="541" vertical-scroll-proportion="0.50582147" vertical-offset="0" max-vertical-offset="773" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/model/BaseUtilityAbstract.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="7" selection-start="181" selection-end="181" vertical-scroll-proportion="0.13971539" vertical-offset="11" max-vertical-offset="12308" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/model/DbContextAbstract.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="690" column="69" selection-start="19798" selection-end="19855" vertical-scroll-proportion="0.3751617" vertical-offset="11287" max-vertical-offset="19176" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/validator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.6105263" vertical-offset="1224" max-vertical-offset="2431" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/utility.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="20" selection-start="463" selection-end="474" vertical-scroll-proportion="0.06710526" vertical-offset="102" max-vertical-offset="3706" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/model/Module.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="202" column="42" selection-start="5158" selection-end="5158" vertical-scroll-proportion="0.6157827" vertical-offset="2839" max-vertical-offset="5015" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/router/error_routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="3" selection-start="403" selection-end="403" vertical-scroll-proportion="0.2858991" vertical-offset="0" max-vertical-offset="773" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/model/ItemModifier.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="24" selection-start="408" selection-end="412" vertical-scroll-proportion="-0.15394567" vertical-offset="340" max-vertical-offset="4318" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/controller/BaseControllerAbstract.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="238" column="10" selection-start="5960" selection-end="6176" vertical-scroll-proportion="0.5045161" vertical-offset="3519" max-vertical-offset="6035" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/responder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.45806453" vertical-offset="355" max-vertical-offset="2686">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/controller/MenuCategoryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="801" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/controller/AreaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="4" selection-start="168" selection-end="248" vertical-scroll-proportion="0.1316129" vertical-offset="0" max-vertical-offset="775" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/controller/ItemController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="801" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/controller/UserCredentialController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2873" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/router/route_composer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="142" column="25" selection-start="3258" selection-end="3258" vertical-scroll-proportion="0.0" vertical-offset="2414" max-vertical-offset="2516" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/controller/UploadController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="13" selection-start="896" selection-end="896" vertical-scroll-proportion="-12.807693" vertical-offset="92" max-vertical-offset="867" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/model/Associate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="155" column="32" selection-start="4290" selection-end="4290" vertical-scroll-proportion="-7.1153846" vertical-offset="2331" max-vertical-offset="4607" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/model/Branch.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="160" column="32" selection-start="4459" selection-end="4459" vertical-scroll-proportion="-7.1153846" vertical-offset="2382" max-vertical-offset="7565">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/model/Contact.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="135" column="32" selection-start="3492" selection-end="3492" vertical-scroll-proportion="-7.1153846" vertical-offset="1991" max-vertical-offset="4947" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/model/Customer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="146" column="32" selection-start="3816" selection-end="3816" vertical-scroll-proportion="-7.1153846" vertical-offset="2178" max-vertical-offset="5644" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/model/Department.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="32" selection-start="1999" selection-end="1999" vertical-scroll-proportion="-6.8461537" vertical-offset="1080" max-vertical-offset="3315" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/model/Discount.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="111" column="32" selection-start="2922" selection-end="2922" vertical-scroll-proportion="-6.8461537" vertical-offset="1590" max-vertical-offset="3757" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/model/HappyHour.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="32" selection-start="2307" selection-end="2307" vertical-scroll-proportion="-6.8461537" vertical-offset="1233" max-vertical-offset="3434" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/model/HappyHourTiming.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="115" column="32" selection-start="2868" selection-end="2868" vertical-scroll-proportion="-6.8461537" vertical-offset="1658" max-vertical-offset="3808" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/model/InventoryGroup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="32" selection-start="2059" selection-end="2059" vertical-scroll-proportion="-6.8461537" vertical-offset="1080" max-vertical-offset="3315" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/model/Item.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="187" column="32" selection-start="5645" selection-end="5645" vertical-scroll-proportion="-6.8461537" vertical-offset="2882" max-vertical-offset="5644" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/model/Location.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="98" column="32" selection-start="2540" selection-end="2540" vertical-scroll-proportion="-6.8461537" vertical-offset="1369" max-vertical-offset="3587" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/model/MenuCategory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="88" column="32" selection-start="2297" selection-end="2297" vertical-scroll-proportion="-6.8461537" vertical-offset="1199" max-vertical-offset="3587" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/model/MenuGroup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="32" selection-start="2111" selection-end="2111" vertical-scroll-proportion="-6.8461537" vertical-offset="1148" max-vertical-offset="3502" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/model/Modifier.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="32" selection-start="2276" selection-end="2276" vertical-scroll-proportion="-6.8461537" vertical-offset="1250" max-vertical-offset="3485" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/model/ModifierOption.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="109" column="32" selection-start="3047" selection-end="3047" vertical-scroll-proportion="-6.8461537" vertical-offset="1556" max-vertical-offset="3995" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/model/PaymentMode.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="115" column="32" selection-start="3084" selection-end="3084" vertical-scroll-proportion="0.0" vertical-offset="1955" max-vertical-offset="3944" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/model/Printer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="32" selection-start="2373" selection-end="2373" vertical-scroll-proportion="0.0" vertical-offset="1598" max-vertical-offset="3485" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/model/Role.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="32" selection-start="1935" selection-end="1935" vertical-scroll-proportion="0.0" vertical-offset="1377" max-vertical-offset="3604">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/model/Shift.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="32" selection-start="2232" selection-end="2232" vertical-scroll-proportion="0.0" vertical-offset="1530" max-vertical-offset="3587">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/model/Tax.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="112" column="32" selection-start="2947" selection-end="2947" vertical-scroll-proportion="0.0" vertical-offset="1904" max-vertical-offset="4862">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/model/TaxProfile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="32" selection-start="2000" selection-end="2000" vertical-scroll-proportion="0.0" vertical-offset="1377" max-vertical-offset="3434">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/model/TimeSitting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="120" column="32" selection-start="3045" selection-end="3045" vertical-scroll-proportion="0.0" vertical-offset="2040" max-vertical-offset="3995">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/model/TransactionType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="32" selection-start="2385" selection-end="2385" vertical-scroll-proportion="0.0" vertical-offset="1547" max-vertical-offset="3536">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/model/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="140" column="32" selection-start="3719" selection-end="3719" vertical-scroll-proportion="0.0" vertical-offset="2380" max-vertical-offset="5338">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/model/UserCredential.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="150" column="50" selection-start="4209" selection-end="4209" vertical-scroll-proportion="0.0" vertical-offset="2550" max-vertical-offset="9792">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/model/Area.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="32" selection-start="1991" selection-end="1995" vertical-scroll-proportion="0.0" vertical-offset="1394" max-vertical-offset="3434">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora/model/CurrentRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="196" column="25" selection-start="5422" selection-end="5422" vertical-scroll-proportion="-0.093818985" vertical-offset="3332" max-vertical-offset="4556">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
+
